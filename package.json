@@ -1,0 +1,38 @@
+{
+  "name": "react-unstyled-button",
+  "version": "1.0.0",
+  "description": "React component that renders a html button and removes all the styles from it so it looks like an ordinary div element",
+  "keywords": [
+    "Unstyled",
+    "Button",
+    "Accessibility"
+  ],
+  "main": "dist/UnstyledButton.js",
+  "scripts": {
+    "build": "npm run build-scss && npm run build-typescript",
+    "build-scss": "node-sass src/UnstyledButton.scss dist/styles.css",
+    "build-typescript": "tsc",
+    "test": "npm run test-mocha",
+    "test-mocha": "mocha --require ts-node/register src/**/*.test.tsx"
+  },
+  "author": "Snowcoders",
+  "license": "MIT",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "react": ">=15.4.0 <^16.2.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.10",
+    "@types/enzyme": "^3.1.6",
+    "@types/mocha": "^2.2.45",
+    "@types/react": "^16.0.31",
+    "chai": "^4.1.2",
+    "enzyme": "^2",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "mocha": "^4.1.0",
+    "node-sass": "^4.7.2",
+    "react-dom": "^16.2.0",
+    "ts-node": "^4.1.0",
+    "typescript": "^2.6.2"
+  }
+}
