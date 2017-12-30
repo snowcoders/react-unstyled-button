@@ -7,30 +7,35 @@
     "Button",
     "Accessibility"
   ],
-  "main": "dist/UnstyledButton.js",
+  "main": "dist/unstyled-button.js",
+  "types": "dist/unstyled-button.d.ts",
   "scripts": {
     "build": "npm run build-scss && npm run build-typescript",
-    "build-scss": "node-sass src/UnstyledButton.scss dist/styles.css",
+    "build-scss": "node-sass src/unstyled-button.scss dist/styles.css",
     "build-typescript": "tsc",
-    "test": "npm run test-mocha",
-    "test-mocha": "mocha --require ts-node/register src/**/*.test.tsx"
+    "test": "npm run mocha",
+    "mocha": "mocha --require ts-node/register src/**/*.test.tsx"
   },
   "author": "Snowcoders",
   "license": "MIT",
   "dependencies": {
-    "classnames": "^2.2.5",
+    "classnames": "^2.2.5"
+  },
+  "peerDependencies": {
     "react": ">=15.4.0 <^16.2.0"
   },
   "devDependencies": {
     "@types/chai": "^4.0.10",
+    "@types/classnames": "^2.2.3",
     "@types/enzyme": "^3.1.6",
     "@types/mocha": "^2.2.45",
     "@types/react": "^16.0.31",
     "chai": "^4.1.2",
-    "enzyme": "^2",
+    "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "mocha": "^4.1.0",
     "node-sass": "^4.7.2",
+    "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "ts-node": "^4.1.0",
     "typescript": "^2.6.2"
