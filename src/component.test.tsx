@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { UnstyledButton, IUnstyledButtonProps } from "./unstyled-button";
+import { UnstyledButton, IUnstyledButtonProps } from "./component";
 
 import { expect } from 'chai';
 import { shallow, configure } from "enzyme";

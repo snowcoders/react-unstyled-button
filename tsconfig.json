@@ -14,7 +14,7 @@
         "noUnusedLocals": false,
         "forceConsistentCasingInFileNames": true,
         "strictNullChecks": true,
-        "preserveConstEnums": true,
+        "preserveConstEnums": true
     },
     "include": [
         "./src/**/*.tsx"
