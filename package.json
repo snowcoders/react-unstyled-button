@@ -1,6 +1,6 @@
 {
   "name": "@snowcoders/react-unstyled-button",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "React component that renders a html button and removes all the styles from it so it looks like an ordinary div element",
   "keywords": [
     "Unstyled",
