@@ -15,7 +15,8 @@
     "build": "npm run build-scss && npm run build-typescript",
     "build-scss": "node-sass src/unstyled-button.scss dist/styles.css",
     "build-typescript": "tsc",
-    "prepare": "npm run build",
+    "clean": "rimraf dist",
+    "prepare": "npm run clean && npm run build",
     "test": "npm run mocha",
     "mocha": "mocha --require ts-node/register src/**/*.test.tsx"
   },
@@ -40,6 +41,7 @@
     "node-sass": "^4.7.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "rimraf": "^2.6.2",
     "ts-node": "^4.1.0",
     "typescript": "^2.6.2"
   }
