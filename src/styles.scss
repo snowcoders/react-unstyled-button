@@ -1,9 +1,12 @@
 .sci-react-unstyled-button {
     background-color: transparent;
     border-radius: 0px;
+    box-sizing: content-box;
     border: none;
+    color: inherit;
+    cursor: pointer;
     display: inline-block;
+    font: inherit;
     padding: 0px;
     text-align: start;
-    font: inherit;
 }
