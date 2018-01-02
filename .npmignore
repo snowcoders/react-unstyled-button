@@ -6,5 +6,6 @@ coverage/**
 .mocha
 .npmignore
 .nycrc
+mocha-es6-hook.js
 package-lock.json
 tsconfig.json
