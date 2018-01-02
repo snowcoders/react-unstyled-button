@@ -1,5 +1,5 @@
 [![npm (scoped)](https://img.shields.io/npm/v/@snowcoders/react-unstyled-button.svg)]() 
-[![CircleCI branch](https://img.shields.io/circleci/project/github/snowcoders/react-unstyled-button/master.svg)]()
+[![CircleCI branch](https://img.shields.io/circleci/project/github/snowcoders/react-unstyled-button.svg)]()
 
 # Use it
 `npm install --save @snowcoders/react-unstyled-button`
