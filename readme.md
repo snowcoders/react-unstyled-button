@@ -1,3 +1,5 @@
+[![npm (scoped)](https://img.shields.io/npm/v/@snowcoders/react-unstyled-button.svg)]()
+
 # Use it
 `npm install --save @snowcoders/react-unstyled-button`
 
