@@ -1,48 +1,45 @@
 import * as React from 'react';
 
-import { UnstyledButton, IUnstyledButtonProps } from "./component";
+import { Dialog, IDialogProps } from "./component";
 
 import { expect } from 'chai';
 import { shallow, configure } from "enzyme";
 
 // Configure enzyme
-import * as Adapter from 'enzyme-adapter-react-16';
+import * as Adapter from "enzyme-adapter-react-16";
 configure({ adapter: new Adapter() });
 
-describe("UnstyledButton", () => {
+describe("Dialog", () => {
     it("Render", () => {
-        let wrapper = shallow(<UnstyledButton />);
+        let wrapper = shallow(<Dialog isVisible={false} />);
         expect(wrapper).to.have.length(1);
     });
 
     it("Default has classname", () => {
-        let wrapper = shallow(<UnstyledButton />);
-        let htmlButton = wrapper.find('button');
-        expect(htmlButton).to.have.length(1);
-        expect(htmlButton.props().className).to.contain('sci-react-unstyled-button');
+        let wrapper = shallow(<Dialog isVisible={false} />);
+        let rootElement = wrapper.first();
+        expect(rootElement.props().className).to.contain('sci-react-dialog');
     });
 
     it("Disable style has no classname", () => {
-        let wrapper = shallow(<UnstyledButton className="blue" isBaseStylesDisabled={true} />);
-        let htmlButton = wrapper.find('button');
-        expect(htmlButton).to.have.length(1);
-        expect(htmlButton.props().className).to.not.contain('sci-react-unstyled-button');
+        let wrapper = shallow(<Dialog isVisible={false} className="blue" isBaseStylesDisabled={true} />);
+        let rootElement = wrapper.first();
+        expect(rootElement.props().className).to.not.contain('sci-react-dialog');
     });
 
     it("Click event", (done) => {
         let props = {
-            onClick: done
+            onBackgroundClick: done
         };
 
-        let wrapper = shallow(<UnstyledButton {...props} />);
-        wrapper.simulate("click");
+        let wrapper = shallow(<Dialog isVisible={false} {...props} />);
+        wrapper.find(".overlay").simulate("click");
     });
 
     it("Class name override", () => {
-        let wrapper = shallow(<UnstyledButton className="blue" />);
-        let htmlButton = wrapper.find('button');
-        expect(htmlButton).to.have.length(1);
-        expect(htmlButton.props().className).to.contain('sci-react-unstyled-button');
-        expect(htmlButton.props().className).to.contain('blue');
+        let wrapper = shallow(<Dialog isVisible={false} className="blue" />);
+        let rootElement = wrapper.first();
+        expect(rootElement.props().className).to.contain('sci-react-dialog');
+        expect(rootElement.props().className).to.contain('blue');
     });
 });
