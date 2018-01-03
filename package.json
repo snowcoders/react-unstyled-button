@@ -1,14 +1,13 @@
 {
-  "name": "@snowcoders/react-dialog",
-  "version": "0.1.0",
+  "name": "@snowcoders/react-unstyled-button",
+  "version": "1.1.4",
   "keywords": [
     "Unstyled",
-    "Base",
-    "Dialog",
-    "Modal"
+    "Button",
+    "Accessibility"
   ],
   "private": false,
-  "repository": "https://github.com/snowcoders/react-dialog",
+  "repository": "https://github.com/snowcoders/react-unstyled-button",
   "main": "dist/component.js",
   "types": "dist/component.d.ts",
   "scripts": {
