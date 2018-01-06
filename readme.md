@@ -2,12 +2,14 @@
 [![CircleCI branch](https://img.shields.io/circleci/project/github/snowcoders/react-unstyled-button.svg)](https://circleci.com/gh/snowcoders/react-unstyled-button)
 
 # Use it
-`npm install --save @snowcoders/react-unstyled-button`
+`npm install --save @snowcoders/react-unstyled-button save-prefix ~` 
 
 # Parent Library
-This repository is part of a larger repository called react-ui-base. The core idea behind the library is that the logic and functionality of a component doesn't really change between UI Libraries, only their styling. Given that situation, the goal is to provide highly customizable UI building blocks that UI libraries can use, combine and style however they wish without worrying about the core logic.
+This component is part of a larger components library, [react-ui-base](https://github.com/snowcoders/react-ui-base). The goal is to keep all the core logic and base css styles in a single location, that way building out new UI component libraries cheaper and faster (and less buggy). 
 
-We highly recommend visiting the parent library's repository (https://github.com/snowcoders/react-ui-base) to understand general core concepts of versioning, upgrades and the suggested way to override our css. You will also find examples of many of our other components of which you are free to use! 
+We highly recommend visiting the react-ui-base repository to understand how to customize the css along with see examples.
+
+You can also view all the components on our demo site https://snowcoders.github.io/react-ui-base/
 
 # This component
 This component takes the normal HTML Button element and removes all styling from it.
