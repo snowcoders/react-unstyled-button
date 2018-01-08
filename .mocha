@@ -1,3 +1,0 @@
---require mocha-es6-hook
---require source-map-support/register
-src/**/*.tsx

@@ -2,8 +2,8 @@
     "compilerOptions": {
         "outDir": "./dist/",
         "sourceMap": true,
-        "module": "es6",
-        "target": "es2015",
+        "module": "commonjs",
+        "target": "es5",
         "moduleResolution": "node",
         "jsx": "react",
         "noImplicitReturns": true,
@@ -17,9 +17,11 @@
         "preserveConstEnums": true
     },
     "include": [
+        "./src/**/*.ts",
         "./src/**/*.tsx"
     ],
     "exclude": [
+        "./src/**/*.test.ts",
         "./src/**/*.test.tsx"
     ]
 }
