@@ -1,7 +1,5 @@
 import * as React from "react";
 
-import * as classNames from "classnames";
-
 export interface IUnstyledButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     isBaseStylesDisabled?: boolean
 }
@@ -9,12 +7,14 @@ export interface IUnstyledButtonProps extends React.ButtonHTMLAttributes<HTMLBut
 export class UnstyledButton extends React.Component<IUnstyledButtonProps> {
     render() {
         let { isBaseStylesDisabled, className, ...htmlProps } = this.props;
+        let classNameArray = [];
         if (isBaseStylesDisabled !== true) {
-            className = classNames("sci-react-unstyled-button", className);
-        } else {
-            className = className;
+            classNameArray.push("sci-react-unstyled-button");
+        }
+        if (className != null) {
+            classNameArray.push(className);
         }
 
-        return <button {...htmlProps} className={className} />;
+        return <button {...htmlProps} className={classNameArray.join(" ")} />;
     }
 }
