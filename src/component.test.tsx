@@ -15,18 +15,43 @@ describe("UnstyledButton", () => {
         expect(wrapper).to.have.length(1);
     });
 
-    it("Default has classname", () => {
-        let wrapper = shallow(<UnstyledButton />);
-        let htmlButton = wrapper.find('button');
-        expect(htmlButton).to.have.length(1);
-        expect(htmlButton.props().className).to.contain('sci-react-unstyled-button');
+    describe("Classname", () => {
+        it("Default has classname", () => {
+            let wrapper = shallow(<UnstyledButton />);
+            let htmlButton = wrapper.find('button');
+            expect(htmlButton).to.have.length(1);
+            expect(htmlButton.props().className).to.contain('sci-react-unstyled-button');
+        });
+
+        it("Disable style has no classname", () => {
+            let wrapper = shallow(<UnstyledButton className="blue" isBaseStylesDisabled={true} />);
+            let htmlButton = wrapper.find('button');
+            expect(htmlButton).to.have.length(1);
+            expect(htmlButton.props().className).to.not.contain('sci-react-unstyled-button');
+        });
+
+        it("Class name override", () => {
+            let wrapper = shallow(<UnstyledButton className="blue" />);
+            let htmlButton = wrapper.find('button');
+            expect(htmlButton).to.have.length(1);
+            expect(htmlButton.props().className).to.contain('sci-react-unstyled-button');
+            expect(htmlButton.props().className).to.contain('blue');
+        });
     });
 
-    it("Disable style has no classname", () => {
-        let wrapper = shallow(<UnstyledButton className="blue" isBaseStylesDisabled={true} />);
-        let htmlButton = wrapper.find('button');
-        expect(htmlButton).to.have.length(1);
-        expect(htmlButton.props().className).to.not.contain('sci-react-unstyled-button');
+    describe("Setting type", () => {
+        it("Default is button", () => {
+            let wrapper = shallow(<UnstyledButton />);
+            let htmlButton = wrapper.find('button');
+            expect(htmlButton).to.have.length(1);
+            expect(htmlButton.props().type).to.equal("button");
+        });
+        it("Set type to reset", () => {
+            let wrapper = shallow(<UnstyledButton type="reset" />);
+            let htmlButton = wrapper.find('button');
+            expect(htmlButton).to.have.length(1);
+            expect(htmlButton.props().type).to.equal("reset");
+        });
     });
 
     it("Click event", (done) => {
@@ -36,13 +61,5 @@ describe("UnstyledButton", () => {
 
         let wrapper = shallow(<UnstyledButton {...props} />);
         wrapper.simulate("click");
-    });
-
-    it("Class name override", () => {
-        let wrapper = shallow(<UnstyledButton className="blue" />);
-        let htmlButton = wrapper.find('button');
-        expect(htmlButton).to.have.length(1);
-        expect(htmlButton.props().className).to.contain('sci-react-unstyled-button');
-        expect(htmlButton.props().className).to.contain('blue');
     });
 });
