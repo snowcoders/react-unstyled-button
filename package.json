@@ -1,6 +1,7 @@
 {
   "name": "@snowcoders/react-unstyled-button",
-  "version": "1.2.1",
+  "description": "React HTMLButton with all default browser styling removed",
+  "version": "1.2.2",
   "keywords": [
     "Unstyled",
     "Button",
