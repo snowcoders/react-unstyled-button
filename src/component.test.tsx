@@ -3,7 +3,8 @@ import * as React from 'react';
 import { UnstyledButton, IUnstyledButtonProps } from "./component";
 
 import { expect } from 'chai';
-import { shallow, configure } from "enzyme";
+import { spy } from 'sinon';
+import { shallow, mount, configure } from "enzyme";
 
 // Configure enzyme
 import * as Adapter from 'enzyme-adapter-react-16';
@@ -38,6 +39,16 @@ describe("UnstyledButton", () => {
             expect(htmlButton.props().className).to.contain('blue');
         });
     });
+
+    it("InnerRef", (done => {
+        let innerRefHandler = (ref) => {
+            expect(ref).to.exist;
+            done();
+        };
+        let wrapper = mount(<UnstyledButton innerRefHandler={innerRefHandler} />);
+        let htmlButton = wrapper.find('button');
+        expect(htmlButton).to.have.length(1);
+    }));
 
     describe("Setting type", () => {
         it("Default is button", () => {
