@@ -30,7 +30,7 @@
     "karma": "4.0.1",
     "lint-staged": "8.1.5",
     "mocha-typescript": "1.1.17",
-    "mocha": "6.1.1",
+    "mocha": "6.1.2",
     "node-sass": "4.11.0",
     "prettier": "1.16.4",
     "react-dom": "16.8.6",
