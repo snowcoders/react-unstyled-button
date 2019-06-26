@@ -13,7 +13,7 @@
     "chai": "4.2.0",
     "enzyme-adapter-react-16": "1.14.0",
     "enzyme": "3.10.0",
-    "husky": "2.5.0",
+    "husky": "2.6.0",
     "jsdom": "15.1.1",
     "karma-chai": "0.1.0",
     "karma-coverage": "1.1.2",
