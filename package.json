@@ -2,7 +2,7 @@
   "author": "Snowcoders",
   "description": "React HTMLButton with all default browser styling removed",
   "devDependencies": {
-    "@snowcoders/renovate-config": "1.0.3",
+    "@snowcoders/renovate-config": "1.0.4",
     "@snowcoders/sortier": "2.6.2",
     "@types/chai": "4.1.7",
     "@types/classnames": "2.2.9",
