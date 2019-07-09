@@ -3,11 +3,64 @@
 
 # Use it
 
-`npm install --save @snowcoders/react-unstyled-button save-prefix "~"`
+`npm install --save @snowcoders/react-unstyled-button`
 
-And the styles
+```
+import { UnstyledButton } from "@snowcoders/react-unstyled-button";
+import "@snowcoders/react-unstyled-button/styles.css";
 
-`@import "@snowcoders/react-unstyled-button/styles.css";`
+render() {
+    <UnstyledButton
+        onClick={this.onClick}
+    >
+        Button text
+    </UnstyledButton>
+}
+```
+
+## Adding custom styling
+
+Custom styling can be applied via specificity
+
+```
+// green-button.css
+.sci-react-unstyled-button.green-button {
+  // Box-Sizing
+  padding: 14px 40px;
+  border-radius: 100px;
+  border-width: 0px;
+  border-style: solid;
+
+  // Colors
+  border-color: #16da00;
+  background-color: green;
+  color: white;
+
+  // Sizes
+  font-size: 16px;
+  font-family: "Open Sans", X-LocaleSpecific, sans-serif;
+
+  &:hover {
+    background-color: darkgreen;
+  }
+}
+```
+
+```
+// green-button.js
+import { UnstyledButton } from "@snowcoders/react-unstyled-button";
+import "@snowcoders/react-unstyled-button/styles.css";
+import "./green-button.css";
+
+render() {
+    <UnstyledButton
+        className="green-button"
+        onClick={this.onClick}
+    >
+        Button text
+    </UnstyledButton>
+}
+```
 
 # Parent Library
 
