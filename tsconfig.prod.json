@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "noUnusedLocals": true,
+    "sourceMap": false
+  },
+  "extends": "./tsconfig.base.json"
+}

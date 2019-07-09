@@ -1,6 +1,7 @@
-.circleci/**
-.vscode/**
-coverage/**
+.rpt2_cache
+.circleci
+.vscode
+coverage
 .gitignore
 .mocha
 .npmignore
