@@ -4,7 +4,7 @@
   "devDependencies": {
     "@snowcoders/renovate-config": "1.0.4",
     "@snowcoders/sortier": "2.6.2",
-    "@types/chai": "4.1.7",
+    "@types/chai": "4.2.0",
     "@types/classnames": "2.2.9",
     "@types/enzyme": "3.10.3",
     "@types/mocha": "5.2.7",
