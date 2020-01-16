@@ -40,7 +40,7 @@
     "rollup-plugin-scss": "2.1.0",
     "rollup-plugin-terser": "5.2.0",
     "rollup-plugin-typescript2": "0.25.3",
-    "sinon": "8.0.4",
+    "sinon": "8.1.0",
     "source-map-support": "0.5.16",
     "ts-node": "8.6.2",
     "tsconfig-paths": "3.9.0",
