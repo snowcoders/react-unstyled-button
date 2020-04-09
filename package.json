@@ -15,7 +15,7 @@
     "enzyme-adapter-react-16": "1.15.2",
     "husky": "4.2.4",
     "jsdom": "16.2.2",
-    "karma": "4.4.1",
+    "karma": "5.0.0",
     "karma-chai": "0.1.0",
     "karma-coverage": "2.0.1",
     "karma-jsdom-launcher": "8.0.1",
