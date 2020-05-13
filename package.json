@@ -3,7 +3,7 @@
   "description": "React HTMLButton with all default browser styling removed",
   "devDependencies": {
     "@snowcoders/renovate-config": "1.0.7",
-    "@snowcoders/sortier": "3.1.1",
+    "@snowcoders/sortier": "3.1.2",
     "@types/chai": "4.2.11",
     "@types/classnames": "2.2.10",
     "@types/enzyme": "3.10.5",
