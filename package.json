@@ -28,7 +28,7 @@
     "karma-typescript": "5.0.3",
     "karma-typescript-es6-transform": "5.0.3",
     "karma-typescript-preprocessor": "0.4.0",
-    "lint-staged": "10.2.4",
+    "lint-staged": "10.2.6",
     "mocha": "7.1.2",
     "mocha-typescript": "1.1.17",
     "node-sass": "4.14.1",
