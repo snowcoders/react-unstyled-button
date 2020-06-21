@@ -51,7 +51,7 @@
     "test": "jest"
   },
   "types": "dist/component.d.ts",
-  "version": "1.2.4",
+  "version": "2.0.0-beta.0",
   "dependencies": {
     "@types/enzyme-adapter-react-16": "^1.0.6"
   }
