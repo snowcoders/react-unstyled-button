@@ -4,14 +4,16 @@ import pkg from "./package.json";
 export default {
   external: [...Object.keys(pkg.peerDependencies || {})],
   input: "./src/component.tsx",
-  output: [{
+  output: [
+    {
       dir: "dist",
-      entryFileNames: "[name].js",
-      format: "es"
-    }],
+      entryFileNames: "[name].mjs",
+      format: "es",
+    },
+  ],
   plugins: [
     scss({
-      output: "./dist/styles.css"
-    })
-  ]
+      output: "./dist/styles.css",
+    }),
+  ],
 };
