@@ -2,36 +2,26 @@ import * as React from "react";
 
 import "./styles.scss";
 
-export interface IUnstyledButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  isBaseStylesDisabled?: boolean;
-  innerRefHandler?: (ref: null | HTMLButtonElement) => void;
-}
+export type UnstyledButtonProps = React.DetailedHTMLProps<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+>;
 
-export class UnstyledButton extends React.Component<IUnstyledButtonProps> {
-  render() {
-    let {
-      className,
-      innerRefHandler,
-      isBaseStylesDisabled,
-      type,
-      ...htmlProps
-    } = this.props;
-    let classNameArray = [];
-    if (isBaseStylesDisabled !== true) {
-      classNameArray.push("sci-react-unstyled-button");
-    }
-    if (className != null) {
-      classNameArray.push(className);
-    }
-
-    return (
-      <button
-        ref={innerRefHandler}
-        {...htmlProps}
-        className={classNameArray.join(" ")}
-        type={type || "button"}
-      />
-    );
+export const UnstyledButton = React.forwardRef<
+  HTMLButtonElement,
+  UnstyledButtonProps
+>((props, ref) => {
+  const { className, type, ...rest } = props;
+  const classNameArray = ["sci-react-unstyled-button"];
+  if (className != null) {
+    classNameArray.push(className);
   }
-}
+  return (
+    <button
+      ref={ref}
+      className={classNameArray.join(" ")}
+      type={type || "button"}
+      {...rest}
+    ></button>
+  );
+});
