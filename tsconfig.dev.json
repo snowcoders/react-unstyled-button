@@ -3,5 +3,5 @@
     "noUnusedLocals": false,
     "sourceMap": true
   },
-  "extends": "./tsconfig.base.json"
+  "extends": "./tsconfig.json"
 }

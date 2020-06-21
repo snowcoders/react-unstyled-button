@@ -4,33 +4,15 @@
   "devDependencies": {
     "@snowcoders/renovate-config": "1.0.7",
     "@snowcoders/sortier": "3.1.2",
-    "@types/chai": "4.2.11",
     "@types/classnames": "2.2.10",
     "@types/enzyme": "3.10.5",
-    "@types/mocha": "7.0.2",
+    "@types/jest": "26.0.0",
     "@types/react": "16.9.35",
-    "@types/sinon": "9.0.4",
-    "chai": "4.2.0",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.2",
-    "husky": "4.2.5",
-    "jsdom": "16.2.2",
-    "karma": "5.0.9",
-    "karma-chai": "0.1.0",
-    "karma-coverage": "2.0.2",
-    "karma-jsdom-launcher": "8.0.2",
-    "karma-mocha": "2.0.1",
-    "karma-mocha-reporter": "2.2.5",
-    "karma-sinon": "1.0.5",
-    "karma-source-map-support": "1.4.0",
-    "karma-sourcemap-loader": "0.3.7",
-    "karma-sourcemap-writer": "0.1.2",
-    "karma-typescript": "5.0.3",
-    "karma-typescript-es6-transform": "5.0.3",
-    "karma-typescript-preprocessor": "0.4.0",
+    "husky": "^4.2.5",
+    "jest": "26.0.0",
     "lint-staged": "10.2.7",
-    "mocha": "7.2.0",
-    "mocha-typescript": "1.1.17",
     "node-sass": "4.14.1",
     "prettier": "2.0.5",
     "react": "16.13.1",
@@ -40,7 +22,6 @@
     "rollup-plugin-scss": "2.5.0",
     "rollup-plugin-terser": "6.1.0",
     "rollup-plugin-typescript2": "0.27.1",
-    "sinon": "9.0.2",
     "source-map-support": "0.5.19",
     "ts-node": "8.10.2",
     "tsconfig-paths": "3.9.0",
@@ -53,8 +34,8 @@
     "Accessibility"
   ],
   "license": "MIT",
+  "type": "module",
   "main": "dist/component.js",
-  "module": "dist/component.es.js",
   "name": "@snowcoders/react-unstyled-button",
   "peerDependencies": {
     "react": ">=15.4.0",
@@ -66,10 +47,12 @@
     "build": "rollup -c rollup.config.prod.js",
     "clean": "rimraf coverage dist",
     "dev": "rollup -c rollup.config.dev.js",
-    "karma": "karma start ./karma.conf.js",
     "prepare": "npm run clean && npm run build",
-    "test": "npm run karma"
+    "test": "jest"
   },
   "types": "dist/component.d.ts",
-  "version": "1.2.4"
+  "version": "1.2.4",
+  "dependencies": {
+    "@types/enzyme-adapter-react-16": "^1.0.6"
+  }
 }
