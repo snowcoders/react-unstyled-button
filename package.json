@@ -29,7 +29,7 @@
     "karma-typescript-es6-transform": "5.0.3",
     "karma-typescript-preprocessor": "0.4.0",
     "lint-staged": "10.2.11",
-    "mocha": "8.0.1",
+    "mocha": "8.1.0",
     "mocha-typescript": "1.1.17",
     "node-sass": "4.14.1",
     "prettier": "2.0.5",
