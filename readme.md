@@ -1,3 +1,15 @@
+# Deprecation
+
+The majority of what this package did is remove the styling of the default html button. However now that IE 11 is deprecated, the css property [all: unset](https://caniuse.com/css-all) works across enough browsers that it doesn't make sense to maintain this project.
+
+```css
+input[type=button],
+input[type=submit],
+button {
+  all: unset;
+}
+```
+
 [![npm (scoped)](https://img.shields.io/npm/v/@snowcoders/react-unstyled-button.svg)](https://www.npmjs.com/package/@snowcoders/react-unstyled-button)
 [![CircleCI branch](https://img.shields.io/circleci/project/github/snowcoders/react-unstyled-button/master.svg)](https://circleci.com/gh/snowcoders/react-unstyled-button)
 
